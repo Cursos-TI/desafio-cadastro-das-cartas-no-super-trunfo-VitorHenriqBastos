@@ -11,7 +11,7 @@ int main() {
     float area1, area2, pib1, pib2;
 
 
-    //Informações das Carta 1
+    //Informações da Carta 1
     printf("Vamos começar o jogo com as informações da CARTA 1: \n");
 
     printf("Informe uma letra de 'A' a 'H' para identificar o estado : \n");
@@ -35,9 +35,9 @@ int main() {
     printf("Informe a quantidade de pontos turísticos na cidade: \n");
     scanf("%d", &pontos_turisticos1);
     
-    
+
     printf("\n\n");
-    //Informações das Carta 2
+    //Informações da Carta 2
     
     printf("Agora as informações da CARTA 2: \n");
 
