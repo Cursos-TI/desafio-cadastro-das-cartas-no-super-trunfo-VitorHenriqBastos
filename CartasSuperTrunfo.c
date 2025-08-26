@@ -111,6 +111,7 @@ int main() {
     printf("\n\n");
 
     //Comparação das CARTAS
+    printf("COMPARAÇÃO DAS CARTAS, QUANDO O RESULTADO FOR 1 A 'CARTA 1' GANHOU, QUANDO APARECER 0 A 'CARTA 2' GANHOU. \n");
     printf("População: %d\n ", populacao1 > populacao2);
     printf("Área; %d\n ", area1 > area2);
     printf("PIB: %d\n ", pib1 > pib2);
@@ -118,6 +119,21 @@ int main() {
     printf("Densidade Populacional: %d\n ", densidade1 < densidade2);
     printf("PIB per Capita: %d\n ", capita1 > capita2);
     printf("Super Poder: %d\n ", superpoder1 > superpoder2);
+
+    //Comparação das CARTAS COM IF E ELSE
+    printf("Comparação das cartas Atributo: POPULAÇÃO: \n");
+    printf("Carta 1 - %s: %lu\n", cidade1, populacao1);
+    printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
+
+    if (populacao1 > populacao2)
+    {
+        printf("A carta 1 - %s VENCEU!\n", cidade1);
+    }
+
+    else{
+        printf("A Carta 2 - %s VENCEU!\n", cidade2);
+    }
+    
 
     return 0;
 }
