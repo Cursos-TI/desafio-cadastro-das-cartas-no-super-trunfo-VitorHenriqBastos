@@ -8,7 +8,7 @@ int main() {
     char estado1, estado2;
     char codigo_carta1[10], codigo_carta2[10];
     char cidade1[20], cidade2[20];
-    int pontos_turisticos1, pontos_turisticos2, opcao;
+    int pontos_turisticos1, pontos_turisticos2, opcao, acao;
     unsigned long int populacao1, populacao2;
     float area1, area2, densidade1, densidade2, capita1, capita2, superpoder1, superpoder2;
     double pib1, pib2;
@@ -255,6 +255,53 @@ int main() {
         break;
     
     default:
+        break;
+    }
+
+    //Menu de Ataque, Defesa e Recuo;
+    printf("Escolha o atributo para ser comparado: \n");
+    printf("1 - Ataque\n");
+    printf("2 - Defesa\n");
+    printf("3 - Recuo\n");
+    printf("Opção: \n");
+    scanf("%d", &acao);
+
+    switch (acao)
+    {
+    case 1:
+        printf("Você escolheu ATAQUE \n");
+        printf("Super Poder da Carta 1: %.2f | Super Poder da Carta 2: %.2f\n", superpoder1, superpoder2);
+
+        if (superpoder1 > superpoder2) {
+                printf("Carta 1 -  %s venceu no ataque!\n", cidade1);
+            } else if (superpoder1 < superpoder2) {
+                printf("Carta 2 - %s venceu no ataque!\n", cidade2);
+            } else {
+                printf("Empate no ataque!\n");
+            }
+            break;
+        break;
+
+    case 2:
+        printf("Você escolheu DEFESA \n");
+        printf("Densidade Carta 1: %.2f | Densidade Carta 2: %.2f\n", densidade1, densidade2);
+
+            if (densidade1 < densidade2) {
+                printf("Carta 1 - %s venceu na defesa!\n", cidade1);
+            } else if (densidade1 > densidade2) {
+                printf("Carta 2 - %s venceu na defesa!\n", cidade2);
+            } else {
+                printf("Empate na defesa!\n");
+            }
+        break;
+
+    case 3:
+        printf("Você escolheu RECUO \n");
+        printf("Nenhuma carta vence, a rodada empatou\n");
+        break;
+    
+    default:
+        printf("Opção inválida! Escolha 1, 2 ou 3.\n");
         break;
     }
     
